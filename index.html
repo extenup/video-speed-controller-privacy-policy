@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Video Speed Controller by extenup. Learn how playback controls, preferences and keyboard shortcuts are handled locally in Chrome.">
+  <meta name="color-scheme" content="light dark">
+  <title>Video Speed Controller — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f4f7fa; --surface:#fff; --fg:#202b3c; --muted:#536174; --line:#d4dce7; --accent:#176746; --code:#edf3ef; font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--fg); }
+    * { box-sizing:border-box; }
+    body { margin:0; }
+    a { color:var(--accent); text-underline-offset:.18em; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:2px; }
+    .skip { position:absolute; top:-100px; left:16px; padding:10px; background:var(--surface); }
+    .skip:focus { top:12px; }
+    header, main, footer { max-width:840px; margin:auto; }
+    header { padding:30px 28px 20px; display:flex; gap:16px; justify-content:space-between; align-items:center; font-size:.9rem; }
+    .brand { font-weight:700; }
+    header a { font-size:.85rem; }
+    main { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:40px 44px; }
+    h1 { font-size:2rem; line-height:1.2; letter-spacing:-.035em; margin:0 0 24px; }
+    h1 + p { color:var(--muted); font-size:.9rem; }
+    h2 { font-size:1.25rem; line-height:1.35; margin:34px 0 12px; }
+    p { margin:14px 0; }
+    ul { padding-left:1.4em; }
+    li { margin:12px 0; }
+    p, li, code, a { overflow-wrap:anywhere; }
+    code { background:var(--code); padding:.1em .3em; border-radius:4px; font-size:.9em; }
+    footer { padding:24px 28px 36px; color:var(--muted); font-size:.85rem; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#171e29; --surface:#202938; --fg:#edf2fa; --muted:#acb8ca; --line:#435168; --accent:#77dfb3; --code:#293e38; } }
+    @media (max-width:640px) { header { padding:22px 20px 16px; flex-wrap:wrap; } main { padding:28px 20px; border-left:0; border-right:0; border-radius:0; } h1 { font-size:1.7rem; } footer { padding:22px 20px; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#policy">Skip to privacy policy</a>
+  <header><span class="brand">Video Speed Controller</span><a href="mailto:extenup@gmail.com">Contact support</a></header>
+  <main id="policy">
+<h1>Privacy Policy — Video Speed Controller — Speed &amp; Volume Booster</h1>
+<p>Last updated: 20 September 2026. This policy describes version 1.1.0.</p>
+<p>Video Speed Controller, provided by extenup, controls supported HTML5 video and audio in Chrome. Its playback controls and audio processing run locally. The extension does not send playback data, browsing data, preferences or shortcut events to the developer or an external service. It has no account, analytics, advertising or tracking service.</p>
+<h2>Information handled locally</h2>
+<p>The extension uses only information needed for its playback controls:</p>
+<ul>
+<li><strong>Media elements and playback state.</strong> It detects HTML5 video and audio elements and reads their playback rate, volume, mute state, time, duration and screen position. It uses these properties to change speed, adjust normal volume, seek, position on-video controls and show player-reported values in the popup.</li>
+<li><strong>Addresses used for boost compatibility.</strong> When on-video audio boost is requested, it examines the media source URL and current page URL/origin locally to decide whether it can route the source through Web Audio. These addresses are not written to extension storage or included in the popup's player reports. The extension does not keep a browsing history or read Chrome's history database.</li>
+<li><strong>Shortcut and layout events.</strong> It matches physical-key events to your shortcut assignments and checks whether the event comes from an editable field. It also handles scroll and resize events to position the on-video controls. It does not record a keystroke or activity log, read text typed into fields, or collect the text of articles or messages.</li>
+<li><strong>Temporary control messages.</strong> The popup and the extension's page scripts exchange numeric player counts, playback rates, volume/mute values, boost values, failure counts and temporary request IDs. Chrome tab and frame IDs route and combine these local reports. These identifiers and reports are not saved to extension storage or transmitted outside the browser.</li>
+<li><strong>Compatible audio.</strong> When you use the on-video boost control, compatible media audio is processed through the browser's Web Audio API to adjust gain. This feature does not use a microphone, record audio or video, or upload media. Boost may be unavailable for some sources or browser conditions.</li>
+</ul>
+<p>The toolbar popup changes speed and normal volume on the current tab. The separate “Apply speed &amp; volume to all tabs” button applies both selected values to loaded, accessible players across open tabs. Popup volume is limited to the normal 0–100% range and does not create an audio-processing graph; above-normal boost is a separate on-video action.</p>
+<h2>Information saved on your device</h2>
+<p>The extension uses <code>chrome.storage.local</code> to save your default speed, speed step, rewind/advance interval, boost ceiling, overlay visibility, remember-speed choice and shortcut assignments. When remembering speed is enabled, it also saves the last used speed. Version 1.1.0 stores that remembered value separately from the other preferences and can read the earlier stored format.</p>
+<p>These settings are stored in your local Chrome profile, not in the extension developer's servers or Chrome's extension sync storage. The extension does not save page URLs, media addresses, player reports, recordings or key-event histories.</p>
+<p>Default and remembered speeds apply to new pages. Changing them does not change players already open. Editing Default speed also updates the next remembered speed. Live settings for an open document remain in memory while that document is open.</p>
+<h2>Retention and your controls</h2>
+<p>Saved preferences remain until you change them, reset them or remove the extension. “Reset preferences” restores the extension's default settings and resets its remembered speed. It does not reset current playback speeds or erase your website's own stored settings. Other preferences, including overlay visibility and the boost ceiling, update immediately. Uninstalling the extension removes its local extension storage from that Chrome profile.</p>
+<p>Temporary popup reports are discarded when their request or popup ends. Page control state lasts for the current document and ends when that document is closed or navigated away from. You can disable the extension or change its website access through Chrome's extension controls.</p>
+<h2>Permissions</h2>
+<ul>
+<li><strong>Storage:</strong> saves the playback preferences and remembered speed described above on your device.</li>
+<li><strong>Website access through all-site content scripts:</strong> lets controls work on supported HTML5 media across websites and eligible embedded frames. The scripts use the local media properties, address checks, shortcut events and layout information described in this policy. Some protected pages and players cannot be accessed.</li>
+</ul>
+<p>Version 1.1.0 does not add a tabs, browsing-history, microphone or recording permission. It uses Chrome's tab messaging with the existing page scripts to perform the current-tab and explicit all-tabs controls.</p>
+<h2>Network requests and sharing</h2>
+<p>The extension's code makes no external network requests. It does not sell data, transmit user data to the developer or third parties, or use data for advertising, profiling, analytics, creditworthiness or lending. All extension code is included in its installed package; it does not load remote executable code.</p>
+<p>Websites and media providers you visit continue their own normal network activity under their policies. Opening this hosted policy page is also a normal website visit, separate from the extension's local operation. If you choose to email support, the email service handles your message so we can respond.</p>
+<h2>Limited Use</h2>
+<p>Video Speed Controller's use of information complies with the Chrome Web Store User Data Policy, including its Limited Use requirements. Information is used only to provide the playback controls described here. The extension does not make the user's media, page addresses, playback state or shortcut events available to the developer or other people.</p>
+<h2>Changes and contact</h2>
+<p>This policy and the Chrome Web Store disclosures will be updated if the extension's data handling changes.</p>
+<p>Questions about this policy or the extension: extenup@gmail.com.</p>
+  </main>
+  <footer>Provided by extenup. <a href="https://chromewebstore.google.com/detail/pedkodpgjeojhepbcgbfhbaojcadblnh">View the Chrome Web Store listing</a>.</footer>
+</body>
+</html>
